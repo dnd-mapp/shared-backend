@@ -1,6 +1,6 @@
 {
   "name": "@dnd-mapp/shared-backend",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "Shared NestJS infrastructure library providing reusable modules and configuration helpers for D&D Mapp backend services",
   "keywords": [
