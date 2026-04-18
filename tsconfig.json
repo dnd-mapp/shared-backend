@@ -1,0 +1,33 @@
+{
+    "references": [{ "path": "./tsconfig.spec.json" }],
+    "include": ["./src/**/*.ts"],
+    "exclude": ["./node_modules/", "./dist/", "./src/**/*.spec.ts"],
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "forceConsistentCasingInFileNames": true,
+        "lib": ["ES2024"],
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "newLine": "lf",
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedIndexedAccess": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "outDir": "./dist/shared-backend",
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true,
+        "strictBindCallApply": true,
+        "strictFunctionTypes": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "target": "ESNext",
+        "types": ["node"],
+        "useUnknownInCatchVariables": true
+    }
+}

@@ -1,0 +1,106 @@
+{
+  "name": "@dnd-mapp/shared-backend",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Shared NestJS infrastructure library providing reusable modules and configuration helpers for D&D Mapp backend services",
+  "keywords": ["nestjs", "dnd-mapp", "shared-backend", "database", "health", "fastify", "prisma", "typescript"],
+  "author": "NoNamer777",
+  "homepage": "https://github.com/dnd-mapp/shared-backend",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnd-mapp/shared-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dnd-mapp/shared-backend/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist/shared-backend"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/shared-backend/index.js",
+      "require": "./dist/shared-backend/index.cjs",
+      "types": "./dist/shared-backend/index.d.ts"
+    }
+  },
+  "main": "./dist/shared-backend/index.cjs",
+  "module": "./dist/shared-backend/index.js",
+  "types": "./dist/shared-backend/index.d.ts",
+  "engines": {
+    "node": "~24.15"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "~24.15",
+      "onFail": "error"
+    },
+    "packageManager": [
+      {
+        "name": "pnpm",
+        "version": "10.33.0",
+        "onFail": "error"
+      },
+      {
+        "name": "npm",
+        "version": "~11.12.1",
+        "onFail": "warn"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "pnpm exec vite build",
+    "build:development": "pnpm exec vite build -w -m development",
+    "test": "pnpm exec vitest run",
+    "test:development": "pnpm exec vitest --ui",
+    "lint": "pnpm lint:eslint && pnpm lint:markdownlint",
+    "lint:eslint": "pnpm exec eslint .",
+    "lint:markdownlint": "pnpm exec markdownlint \"**/*.md\"",
+    "format:write": "pnpm exec prettier --write .",
+    "format:check": "pnpm exec prettier --check ."
+  },
+  "peerDependencies": {
+    "@fastify/helmet": "~13.0.2",
+    "@nestjs/common": "~11.1.19",
+    "@nestjs/config": "~4.0.4",
+    "@nestjs/core": "~11.1.19",
+    "@nestjs/platform-fastify": "~11.1.19",
+    "@nestjs/terminus": "~11.1.1",
+    "@nestjs/throttler": "~6.5.0",
+    "@prisma/adapter-mariadb": "~7.7.0",
+    "@prisma/client": "~7.7.0",
+    "class-transformer": "~0.5.1",
+    "class-validator": "~0.15.1",
+    "fastify": "~5.8.4",
+    "mariadb": "~3.5.2",
+    "reflect-metadata": "~0.2.2",
+    "rxjs": "~7.8.2"
+  },
+  "dependencies": {
+    "@dnd-mapp/shared-utils": "~1.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "~10.0.1",
+    "@nestjs/testing": "~11.1.19",
+    "@types/node": "~24.12.2",
+    "@vitest/coverage-v8": "~4.1.4",
+    "@vitest/ui": "~4.1.4",
+    "eslint": "~10.2.1",
+    "eslint-config-prettier": "~10.1.8",
+    "fastify": "~5.8.4",
+    "globals": "~17.5.0",
+    "markdownlint-cli": "~0.48.0",
+    "prettier": "~3.8.3",
+    "prettier-plugin-organize-imports": "~4.3.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "~8.58.2",
+    "vite": "~8.0.8",
+    "vite-plugin-dts": "~4.5.4",
+    "vite-plugin-static-copy": "~4.0.1",
+    "vitest": "~4.1.4"
+  }
+}

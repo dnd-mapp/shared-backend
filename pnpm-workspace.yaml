@@ -1,0 +1,8 @@
+packages:
+  - '!dist/**/*'
+blockExoticSubdeps: true
+ignoreDepScripts: true
+packageManagerStrictVersion: true
+savePrefix: '~'
+strictPeerDependencies: true
+verifyDepsBeforeRun: prompt
