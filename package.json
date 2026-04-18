@@ -3,7 +3,16 @@
   "version": "0.0.0",
   "license": "MIT",
   "description": "Shared NestJS infrastructure library providing reusable modules and configuration helpers for D&D Mapp backend services",
-  "keywords": ["nestjs", "dnd-mapp", "shared-backend", "database", "health", "fastify", "prisma", "typescript"],
+  "keywords": [
+    "nestjs",
+    "dnd-mapp",
+    "shared-backend",
+    "database",
+    "health",
+    "fastify",
+    "prisma",
+    "typescript"
+  ],
   "author": "NoNamer777",
   "homepage": "https://github.com/dnd-mapp/shared-backend",
   "repository": {

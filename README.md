@@ -17,14 +17,14 @@ pnpm install
 
 ## Scripts
 
-| Command | Description |
-|:--------|:------------|
-| `pnpm build` | Production build (ESM + CJS + type declarations) |
-| `pnpm build:development` | Watch mode build |
-| `pnpm test` | Run unit tests with Vitest |
-| `pnpm lint` | Lint with markdownlint and ESLint |
-| `pnpm format:write` | Format with Prettier |
-| `pnpm format:check` | Check formatting |
+| Command                  | Description                                      |
+|:-------------------------|:-------------------------------------------------|
+| `pnpm build`             | Production build (ESM + CJS + type declarations) |
+| `pnpm build:development` | Watch mode build                                 |
+| `pnpm test`              | Run unit tests with Vitest                       |
+| `pnpm lint`              | Lint with markdownlint and ESLint                |
+| `pnpm format:write`      | Format with Prettier                             |
+| `pnpm format:check`      | Check formatting                                 |
 
 ## License
 

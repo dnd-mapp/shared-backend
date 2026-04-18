@@ -8,7 +8,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
-- (n/a)
+- `ConfigModule` with Fastify adapter setup, CORS, Helmet, throttler, class-transform, and serialization configuration
+- Environment variable validation with `validateEnvironmentVariables` and `IsHost` decorator
+- `DatabaseModule` providing a Prisma-based database service with MariaDB adapter support
+- `HealthModule` exposing a `/health` endpoint via `@nestjs/terminus`
+- GitHub Actions workflows for pull requests, main branch pushes, tag pushes, and releases
+- Dependabot configuration for automated dependency updates
+- ESLint, Prettier, markdownlint, and EditorConfig tooling setup
+- Vitest test configuration with coverage support
+- Vite build configuration producing ESM, CJS, and type declaration outputs
 
 ### Changed
 

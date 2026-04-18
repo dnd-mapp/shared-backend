@@ -9,9 +9,10 @@ function generatePackageJson(outDir: string): Plugin {
         name: 'generate-package-json',
         async closeBundle() {
             const raw = await readFile('./package.json', 'utf-8');
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
             const { scripts, packageManager, devEngines, publishConfig, devDependencies, ...rest } = JSON.parse(raw);
 
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
             const distPkg = {
                 ...rest,
                 exports: { '.': { import: './index.js', require: './index.cjs', types: './index.d.ts' } },
