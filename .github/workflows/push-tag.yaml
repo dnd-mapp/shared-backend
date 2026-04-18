@@ -1,0 +1,23 @@
+name: Push tag
+on:
+    push:
+        tags:
+            - 'v*'
+permissions:
+    contents: read
+    id-token: write
+jobs:
+    publish:
+        name: Publish
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+              with:
+                  fetch-depth: 0
+
+            - name: CI
+              uses: ./.github/actions/ci
+
+            - name: Publish package
+              uses: dnd-mapp/.github/.github/actions/publish-npm-package@f41a6251f959b29201d2b8a77da6ae8f1c8bf40d

@@ -1,0 +1,33 @@
+version: 2
+updates:
+    - package-ecosystem: 'github-actions'
+      directory: '/'
+      schedule:
+          interval: 'daily'
+
+    - package-ecosystem: 'npm'
+      directory: '/'
+      schedule:
+          interval: 'daily'
+      open-pull-requests-limit: 0
+      labels:
+          - 'dependencies'
+      groups:
+          # Group all linting and formatting tools
+          lint-and-format:
+              patterns:
+                  - 'eslint*'
+                  - 'prettier*'
+                  - 'typescript-eslint*'
+                  - 'globals'
+          # Group Vite and its related plugins
+          vite-stack:
+              patterns:
+                  - 'vite'
+                  - 'vite-plugin-dts'
+          # Group TypeScript and core type definitions
+          typescript-core:
+              patterns:
+                  - 'typescript'
+                  - '@types/*'
+                  - 'tslib'

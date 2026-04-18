@@ -1,0 +1,36 @@
+name: Release
+on:
+    workflow_dispatch:
+        inputs:
+            version:
+                description: The version to release
+                required: true
+                type: choice
+                options:
+                    - major
+                    - minor
+                    - patch
+                    - premajor
+                    - preminor
+                    - prepatch
+                    - prerelease
+            prerelease-id:
+                description: The ID of the prerelease
+                type: choice
+                default: none
+                options:
+                    - none
+                    - alpha
+                    - beta
+                    - rc
+permissions:
+    contents: write
+jobs:
+    release:
+        uses: dnd-mapp/.github/.github/workflows/release.yaml@f41a6251f959b29201d2b8a77da6ae8f1c8bf40d
+        with:
+            version: ${{ inputs.version }}
+            prerelease-id: ${{ inputs.prerelease-id }}
+        secrets:
+            app-id: ${{ secrets.AUTH_APP_ID }}
+            app-private-key: ${{ secrets.AUTH_APP_PRIVATE_KEY }}
