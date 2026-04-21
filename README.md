@@ -26,6 +26,10 @@ pnpm install
 | `pnpm format:write`      | Format with Prettier                             |
 | `pnpm format:check`      | Check formatting                                 |
 
+## Release Pipeline
+
+For details on how releases are triggered, versioned, and published, see the [Release Pipeline](https://github.com/dnd-mapp/.github/blob/main/docs/release-pipeline.md) guide.
+
 ## License
 
 [MIT](./LICENSE)
