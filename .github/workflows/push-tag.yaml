@@ -20,4 +20,4 @@ jobs:
               uses: ./.github/actions/ci
 
             - name: Publish package
-              uses: dnd-mapp/.github/.github/actions/publish-npm-package@56033bd95d364655b13fbb1746297b8ef818e876
+              uses: dnd-mapp/.github/.github/actions/publish-npm-package@e447e89f2347766291393f81dc00cbc0877850f5
